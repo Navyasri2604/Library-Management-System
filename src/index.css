@@ -1,0 +1,337 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Default Theme: Oxford Navy (Crisp Modern Light) */
+  :root, [data-theme="oxford"] {
+    --color-bg-canvas: #f8fafc;
+    --color-bg-card: #ffffff;
+    --color-bg-card-subtle: #f1f5f9;
+    --color-bg-sidebar: #ffffff;
+    --color-bg-navbar: #ffffff;
+    --color-bg-input: #ffffff;
+    --color-bg-modal: #ffffff;
+    --color-bg-table-head: #f8fafc;
+    --color-bg-table-hover: #f8fafc;
+    --color-bg-tag: #eff6ff;
+
+    --color-border: #e2e8f0;
+    --color-border-subtle: #f1f5f9;
+    --color-border-input: #cbd5e1;
+    --color-border-focus: #2563eb;
+
+    --color-text-main: #0f172a;
+    --color-text-body: #334155;
+    --color-text-muted: #64748b;
+    --color-text-subtle: #94a3b8;
+
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+    --color-primary-soft: #eff6ff;
+    --color-primary-text: #1e40af;
+    --color-primary-border: #bfdbfe;
+
+    --color-badge-accent: #1e40af;
+    --color-badge-accent-bg: #dbeafe;
+
+    --color-status-success: #059669;
+    --color-status-success-bg: #ecfdf5;
+    --color-status-success-border: #a7f3d0;
+
+    --color-status-warning: #d97706;
+    --color-status-warning-bg: #fffbeb;
+    --color-status-warning-border: #fde68a;
+
+    --color-status-danger: #dc2626;
+    --color-status-danger-bg: #fef2f2;
+    --color-status-danger-border: #fecaca;
+
+    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
+    --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.06), 0 4px 6px -4px rgb(0 0 0 / 0.06);
+  }
+
+  /* Theme 2: Scholarly Parchment (Warm Heritage Academic Library) */
+  [data-theme="parchment"] {
+    --color-bg-canvas: #fbf9f4;
+    --color-bg-card: #ffffff;
+    --color-bg-card-subtle: #f6f2e8;
+    --color-bg-sidebar: #f8f5ee;
+    --color-bg-navbar: #ffffff;
+    --color-bg-input: #ffffff;
+    --color-bg-modal: #ffffff;
+    --color-bg-table-head: #f4efe2;
+    --color-bg-table-hover: #fbf8f0;
+    --color-bg-tag: #f0fdf4;
+
+    --color-border: #e7dfcf;
+    --color-border-subtle: #f2ece0;
+    --color-border-input: #d6cab3;
+    --color-border-focus: #15803d;
+
+    --color-text-main: #272118;
+    --color-text-body: #4e4436;
+    --color-text-muted: #796d5b;
+    --color-text-subtle: #9f917e;
+
+    --color-primary: #15803d;
+    --color-primary-hover: #166534;
+    --color-primary-soft: #f0fdf4;
+    --color-primary-text: #14532d;
+    --color-primary-border: #bbf7d0;
+
+    --color-badge-accent: #92400e;
+    --color-badge-accent-bg: #fef3c7;
+
+    --color-status-success: #15803d;
+    --color-status-success-bg: #f0fdf4;
+    --color-status-success-border: #bbf7d0;
+
+    --color-status-warning: #b45309;
+    --color-status-warning-bg: #fffbeb;
+    --color-status-warning-border: #fde68a;
+
+    --color-status-danger: #b91c1c;
+    --color-status-danger-bg: #fef2f2;
+    --color-status-danger-border: #fecaca;
+
+    --shadow-card: 0 1px 3px 0 rgb(50 35 15 / 0.05), 0 1px 2px -1px rgb(50 35 15 / 0.05);
+    --shadow-elevated: 0 10px 15px -3px rgb(50 35 15 / 0.07), 0 4px 6px -4px rgb(50 35 15 / 0.07);
+  }
+
+  /* Theme 3: Spring Enterprise (Bootstrap 5 Classic Blue & White) */
+  [data-theme="bootstrap"] {
+    --color-bg-canvas: #f2f4f8;
+    --color-bg-card: #ffffff;
+    --color-bg-card-subtle: #f8f9fa;
+    --color-bg-sidebar: #ffffff;
+    --color-bg-navbar: #ffffff;
+    --color-bg-input: #ffffff;
+    --color-bg-modal: #ffffff;
+    --color-bg-table-head: #eaedf2;
+    --color-bg-table-hover: #f5f7fa;
+    --color-bg-tag: #e7f1ff;
+
+    --color-border: #d9dfe7;
+    --color-border-subtle: #e8ecf1;
+    --color-border-input: #ced4da;
+    --color-border-focus: #0d6efd;
+
+    --color-text-main: #212529;
+    --color-text-body: #495057;
+    --color-text-muted: #6c757d;
+    --color-text-subtle: #8c98a4;
+
+    --color-primary: #0d6efd;
+    --color-primary-hover: #0b5ed7;
+    --color-primary-soft: #e7f1ff;
+    --color-primary-text: #0a58ca;
+    --color-primary-border: #b6d4fe;
+
+    --color-badge-accent: #0a58ca;
+    --color-badge-accent-bg: #cfe2ff;
+
+    --color-status-success: #198754;
+    --color-status-success-bg: #d1e7dd;
+    --color-status-success-border: #a3cfbb;
+
+    --color-status-warning: #d97706;
+    --color-status-warning-bg: #fff3cd;
+    --color-status-warning-border: #ffe69c;
+
+    --color-status-danger: #dc3545;
+    --color-status-danger-bg: #f8d7da;
+    --color-status-danger-border: #f1aeb5;
+
+    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+    --shadow-elevated: 0 8px 16px -2px rgb(0 0 0 / 0.08);
+  }
+
+  /* Theme 4: Emerald Botanic (Fresh Sage & Forest) */
+  [data-theme="emerald"] {
+    --color-bg-canvas: #f2f8f5;
+    --color-bg-card: #ffffff;
+    --color-bg-card-subtle: #e9f4ef;
+    --color-bg-sidebar: #f7faf8;
+    --color-bg-navbar: #ffffff;
+    --color-bg-input: #ffffff;
+    --color-bg-modal: #ffffff;
+    --color-bg-table-head: #e4f0ea;
+    --color-bg-table-hover: #f1f8f4;
+    --color-bg-tag: #e6f4ea;
+
+    --color-border: #cfe0d8;
+    --color-border-subtle: #e1ede6;
+    --color-border-input: #b8d2c5;
+    --color-border-focus: #059669;
+
+    --color-text-main: #064e3b;
+    --color-text-body: #1c4b3c;
+    --color-text-muted: #427260;
+    --color-text-subtle: #6c9987;
+
+    --color-primary: #059669;
+    --color-primary-hover: #047857;
+    --color-primary-soft: #ecfdf5;
+    --color-primary-text: #065f46;
+    --color-primary-border: #a7f3d0;
+
+    --color-badge-accent: #047857;
+    --color-badge-accent-bg: #d1fae5;
+
+    --color-status-success: #059669;
+    --color-status-success-bg: #ecfdf5;
+    --color-status-success-border: #a7f3d0;
+
+    --color-status-warning: #d97706;
+    --color-status-warning-bg: #fffbeb;
+    --color-status-warning-border: #fde68a;
+
+    --color-status-danger: #e11d48;
+    --color-status-danger-bg: #ffe4e6;
+    --color-status-danger-border: #fecdd3;
+
+    --shadow-card: 0 1px 3px 0 rgb(6 78 59 / 0.05);
+    --shadow-elevated: 0 10px 15px -3px rgb(6 78 59 / 0.07);
+  }
+
+  /* Theme 5: Obsidian Midnight (Refined Dark Console) */
+  [data-theme="obsidian"] {
+    --color-bg-canvas: #090d16;
+    --color-bg-card: #0f172a;
+    --color-bg-card-subtle: #131c31;
+    --color-bg-sidebar: #0b1120;
+    --color-bg-navbar: #0b1120;
+    --color-bg-input: #090d16;
+    --color-bg-modal: #0f172a;
+    --color-bg-table-head: #0b1120;
+    --color-bg-table-hover: #172138;
+    --color-bg-tag: #172554;
+
+    --color-border: #1e293b;
+    --color-border-subtle: #162032;
+    --color-border-input: #334155;
+    --color-border-focus: #3b82f6;
+
+    --color-text-main: #f8fafc;
+    --color-text-body: #cbd5e1;
+    --color-text-muted: #94a3b8;
+    --color-text-subtle: #64748b;
+
+    --color-primary: #3b82f6;
+    --color-primary-hover: #2563eb;
+    --color-primary-soft: #1e293b;
+    --color-primary-text: #93c5fd;
+    --color-primary-border: #1d4ed8;
+
+    --color-badge-accent: #93c5fd;
+    --color-badge-accent-bg: #1e3a8a;
+
+    --color-status-success: #10b981;
+    --color-status-success-bg: #064e3b;
+    --color-status-success-border: #047857;
+
+    --color-status-warning: #f59e0b;
+    --color-status-warning-bg: #78350f;
+    --color-status-warning-border: #b45309;
+
+    --color-status-danger: #f43f5e;
+    --color-status-danger-bg: #881337;
+    --color-status-danger-border: #be123c;
+
+    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.4);
+    --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+  }
+}
+
+/* Reusable Theme Component Classes */
+.theme-canvas {
+  background-color: var(--color-bg-canvas);
+  color: var(--color-text-body);
+}
+
+.theme-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.theme-card-subtle {
+  background-color: var(--color-bg-card-subtle);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.theme-sidebar {
+  background-color: var(--color-bg-sidebar);
+  border-color: var(--color-border);
+}
+
+.theme-navbar {
+  background-color: var(--color-bg-navbar);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.theme-input {
+  background-color: var(--color-bg-input);
+  border: 1px solid var(--color-border-input);
+  color: var(--color-text-main);
+  transition: all 0.15s ease-in-out;
+}
+.theme-input:focus {
+  border-color: var(--color-border-focus);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primary-soft);
+}
+
+.theme-table-head {
+  background-color: var(--color-bg-table-head);
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
+}
+
+.theme-table-row {
+  border-color: var(--color-border-subtle);
+  transition: background-color 0.15s ease;
+}
+.theme-table-row:hover {
+  background-color: var(--color-bg-table-hover);
+}
+
+.theme-btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  transition: all 0.15s ease-in-out;
+}
+.theme-btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.theme-btn-secondary {
+  background-color: var(--color-bg-card-subtle);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-main);
+  transition: all 0.15s ease-in-out;
+}
+.theme-btn-secondary:hover {
+  background-color: var(--color-border-subtle);
+}
+
+.theme-title {
+  color: var(--color-text-main);
+}
+
+.theme-muted {
+  color: var(--color-text-muted);
+}
+
+.theme-accent {
+  color: var(--color-primary);
+}

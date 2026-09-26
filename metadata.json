@@ -1,0 +1,6 @@
+{
+  "name": "Library Management System - Developer Guide & Architect",
+  "description": "Interactive system architect, database ER designer, workflow visualizer, and step-by-step roadmap for building a production-grade Java 17 + Spring Boot 3 Library Management System.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
